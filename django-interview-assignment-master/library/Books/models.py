@@ -17,8 +17,8 @@ class Borrowed(models.Model):
         ('Returned','Returned'))
     borrowed_by = models.ForeignKey(User, on_delete= models.CASCADE)
     borrowed_book = models.OneToOneField(Book, on_delete=models.CASCADE)  #ForeignKey(Book, on_delete=models.CASCADE)
-    borrowed_till = models.DateTimeField(null=True , blank= True)
-    status = models.CharField(max_length= 15, default ='Borrowed' ,choices= STATUS)
+    
+    
     
     def __str__(self):
         return self.borrowed_by.username +'/' + self.borrowed_book.title
