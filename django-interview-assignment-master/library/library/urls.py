@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path , include
 from Books.views import *
-
+# pkrefers to primary key or id
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/',include('api.urls')),
@@ -25,5 +25,14 @@ urlpatterns = [
     path('register/',registerPage , name='register_page'),
     path('logout/',logoutUser , name='logout_page'),
     path('books/',booksPage , name='books_page'),
+    path('get/book/<str:pk>/',get_book, name = 'get_book'),
+    path('user/books/',userBooks, name = 'user_books'),
+    path('return/book/<str:pk>/',return_book , name='return_book'),
+    path('user/list/',userList , name='user_list'),
+    path('delete/user/<str:pk>/',delete_user,name='delete_user'),
+    path('update/user/<str:pk>/',update_user,name='update_user'),
+    path('update/books/<str:pk>/',update_books,name='update_books'),
+
+
 
 ]

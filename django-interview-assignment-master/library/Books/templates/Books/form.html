@@ -1,0 +1,12 @@
+{% extends 'Books/main.html'%}
+{% load static %}
+{% block content%}
+
+<form method="POST" action="">
+    {% csrf_token %}
+    {{form}}
+
+    <input class="btn btn-primary" type="submit" value="submit">
+</form>
+
+{% endblock %}

@@ -12,7 +12,15 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'books_page' %}">Books</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'user_books' %}">My Books</a>
+        </li>
+        {% if is_lib %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'user_list' %}">Users</a>
+        </li>
         
+        {% endif %}
         
       </ul>
       <h3> <span class="badge badge-secondary" style="margin-right: 2rem;">Hello, {{request.user.username}} </span></h3>

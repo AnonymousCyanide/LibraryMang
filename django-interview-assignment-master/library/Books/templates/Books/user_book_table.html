@@ -14,13 +14,7 @@
         <th scope="row">{{book.title}}</th>
         <td>{{book.price}} / week</td>
         
-        <td>
-          <a class="btn btn-sm btn-primary" href="{%url 'get_book' book.id%}"> Get Book</a>
-          {% if is_lib %}
-          <a class="btn btn-sm btn-primary" href="{%url 'update_books' book.id%}"> Update Book</a>
-          
-          {% endif %}
-        </td>
+        <td><a class="btn btn-sm btn-primary" href="{%url 'return_book' book.id%}"> Return Book</a></td>
       </tr>
         {%endfor%}
       
