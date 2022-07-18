@@ -3,6 +3,7 @@ from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from Books.models import Book
 from api.serializers import BookSerializer
+
 @api_view(['GET'])
 def get_Data(request):
     books = Book.objects.all()
